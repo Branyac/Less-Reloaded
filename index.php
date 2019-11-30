@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-
+<meta name="robots" content="noimageindex<?php if(is_page() || is_category() || is_archive()) {?>, noindex<?php } ?>" />
 <?php wp_head(); ?>
 </head>
 
@@ -22,11 +22,7 @@
 	<div class="container">
 		
 		<div class="gravatar">
-			<?php 
-				// grab admin email and their photo
-				$admin_email = get_option('admin_email');
-				echo get_avatar( $admin_email, 100 ); 
-			?>
+			<img alt="" src="https://thingsandcode.com/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
 		</div><!--/ author -->
 		
 		<div id="brand">
@@ -34,7 +30,9 @@
 		</div><!-- /brand -->
 	
 		<nav role="navigation" class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<div class="menu"><ul>
+				<li class="page_item page-item-2"><a href="https://thingsandcode.com/about/">About</a></li>
+			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
 		<div class="clear"></div>
@@ -232,13 +230,22 @@
 
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
-		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-reloaded'); ?>" rel="generator"><?php esc_html_e( 'Proudly powered by WordPress', 'less-reloaded'); ?></a>
-		<span class="sep"> <?php esc_html_e( 'and', 'less-reloaded' ); ?> </span>
-		<?php esc_html_e( 'Less Reloaded by Morteza Geransayeh', 'less-reloaded'); ?>
+		Content under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International</a> license
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
 <?php wp_footer(); ?>
 
+<?php if (!is_user_logged_in()) { ?>
+	<script>
+		function getCookie(e){for(var n=e+"=",t=decodeURIComponent(document.cookie).split(";"),o=0;o<t.length;o++){for(var r=t[o];" "==r.charAt(0);)r=r.substring(1);if(0==r.indexOf(n))return r.substring(n.length,r.length)}return""}
+		if(getCookie("viewed_cookie_policy")!="no") {
+			let oId="UA-8277";!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create",oId+"6104-1","auto"),ga("set","dimension1","trafico-real"),ga("set","anonymizeIp",true),ga("send","pageview");
+			console.log("Google Analytics is enabled");
+		} else {
+			console.log("Google Analytics is disabled");
+		}
+	</script>
+<?php } ?>
 </body>
 </html>
