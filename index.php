@@ -7,6 +7,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <meta name="robots" content="noimageindex<?php if(is_404() || is_page() || is_category() || is_archive()) {?>, noindex<?php } ?>" />
 <?php wp_head(); ?>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -237,14 +238,19 @@
 <?php wp_footer(); ?>
 
 <?php if (!is_user_logged_in()) { ?>
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 	<script>
-		function getCookie(e){for(var n=e+"=",t=decodeURIComponent(document.cookie).split(";"),o=0;o<t.length;o++){for(var r=t[o];" "==r.charAt(0);)r=r.substring(1);if(0==r.indexOf(n))return r.substring(n.length,r.length)}return""}
-		if(getCookie("viewed_cookie_policy")!="no") {
-			let oId="UA-8277";!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create",oId+"6104-1","auto"),ga("set","dimension1","trafico-real"),ga("set","anonymizeIp",true),ga("send","pageview");
-			console.log("Google Analytics is enabled");
-		} else {
-			console.log("Google Analytics is disabled");
+	window.cookieconsent.initialise({
+	"palette": {
+		"popup": {
+		"background": "#000"
+		},
+		"button": {
+		"background": "#f1d600"
 		}
+	},
+	"theme": "edgeless"
+	});
 	</script>
 <?php } ?>
 </body>
