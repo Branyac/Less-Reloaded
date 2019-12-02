@@ -32,7 +32,8 @@
 	
 		<nav role="navigation" class="site-navigation main-navigation">
 			<div class="menu"><ul>
-				<li class="page_item"><a href="/about/">About</a></li>
+				<li class="page_item">Written by Sergio</a></li>
+				<li class="page_item"> | <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
 			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
@@ -67,7 +68,7 @@
 							</a>
 						</h1>
 						<div class="meta clearfix">
-							<div class="category"><?php the_category(); ?></div>
+							<div><?php the_time('d/m/Y'); ?></div>
 						</div>
 						<div class="post-meta">
 							<?php
@@ -131,6 +132,8 @@
 
 						<h1 class="title"><?php the_title() ?></h1>
 						<div class="post-meta">
+							<?php the_time('Y-m-d\TH:i:sO') ?>
+							
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
 									<?php comments_popup_link( __( 'Comment', 'less-reloaded' ), __( '1 Comment', 'less-reloaded' ), __( '% Comments', 'less-reloaded' ) ); ?>
