@@ -33,7 +33,7 @@
 		<nav role="navigation" class="site-navigation main-navigation">
 			<div class="menu"><ul>
 				<li class="page_item">Written by Sergio</a></li>
-				<li class="page_item"> | <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
+				<li class="page_item">| <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
 			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
@@ -61,15 +61,14 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article class="post">
-					
+						<div class="post-date">
+							<?php the_time('d/m/Y'); ?>
+						</div>
 						<h1 class="title">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php the_title() ?>
 							</a>
 						</h1>
-						<div class="meta clearfix">
-							<div><?php the_time('d/m/Y'); ?></div>
-						</div>
 						<div class="post-meta">
 							<?php
 							// If comments are open or we have at least one comment, load up the comment template.
@@ -129,11 +128,11 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article class="post">
-
+						<div class="post-date">
+							<?php the_time('d/m/Y'); ?>
+						</div>
 						<h1 class="title"><?php the_title() ?></h1>
 						<div class="post-meta">
-							<?php the_time('Y-m-d\TH:i:sO') ?>
-							
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
 									<?php comments_popup_link( __( 'Comment', 'less-reloaded' ), __( '1 Comment', 'less-reloaded' ), __( '% Comments', 'less-reloaded' ) ); ?>
