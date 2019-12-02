@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<meta name="robots" content="noimageindex<?php if(is_page() || is_category() || is_archive()) {?>, noindex<?php } ?>" />
+<meta name="robots" content="noimageindex<?php if(is_404() || is_page() || is_category() || is_archive()) {?>, noindex<?php } ?>" />
 <?php wp_head(); ?>
 </head>
 
@@ -22,7 +22,7 @@
 	<div class="container">
 		
 		<div class="gravatar">
-			<img alt="" src="https://thingsandcode.com/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
+			<img alt="" src="/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
 		</div><!--/ author -->
 		
 		<div id="brand">
@@ -31,7 +31,7 @@
 	
 		<nav role="navigation" class="site-navigation main-navigation">
 			<div class="menu"><ul>
-				<li class="page_item page-item-2"><a href="https://thingsandcode.com/about/">About</a></li>
+				<li class="page_item"><a href="/about/">About</a></li>
 			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
@@ -124,7 +124,7 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article class="post">
-					
+
 						<h1 class="title"><?php the_title() ?></h1>
 						<div class="post-meta">
 							<?php if( comments_open() ) : ?>
