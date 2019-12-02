@@ -66,6 +66,9 @@
 								<?php the_title() ?>
 							</a>
 						</h1>
+						<div class="meta clearfix">
+							<div class="category"><?php the_category(); ?></div>
+						</div>
 						<div class="post-meta">
 							<?php
 							// If comments are open or we have at least one comment, load up the comment template.

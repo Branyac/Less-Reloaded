@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: less-reloaded
 Tags: one-column, custom-menu, rtl-language-support, threaded-comments, translation-ready
 
-Less Reloaded Theme is based on Less Theme © Jared Erickson, GPL License - https://github.com/alliswell/Less
+Less Reloaded Theme is based on Less Theme ï¿½ Jared Erickson, GPL License - https://github.com/alliswell/Less
 This theme, like WordPress, is licensed under the GPL.
 */
 
@@ -340,7 +340,7 @@ select {
   padding: 0;
   margin: 0;
   background: #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   line-height: 26.64px;
   font-size: 18px;
   font-size: 1.8rem;
@@ -569,7 +569,7 @@ article .the-content a {
   text-decoration: none;
 }
 article .the-content p {
-  color: #787878;
+  color: #505050;
 }
 article .the-content img {
   width: 100%;
