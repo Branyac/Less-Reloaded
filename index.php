@@ -21,7 +21,6 @@
 
 <header id="masthead" class="site-header" role="banner">
 	<div class="container">
-		
 		<div class="gravatar">
 			<img alt="" src="/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
 		</div><!--/ author -->
@@ -132,14 +131,6 @@
 							<?php the_time('d/m/Y'); ?>
 						</div>
 						<h1 class="title"><?php the_title() ?></h1>
-						<div class="post-meta">
-							<?php if( comments_open() ) : ?>
-								<span class="comments-link">
-									<?php comments_popup_link( __( 'Comment', 'less-reloaded' ), __( '1 Comment', 'less-reloaded' ), __( '% Comments', 'less-reloaded' ) ); ?>
-								</span>
-							<?php endif; ?>
-						
-						</div><!--/post-meta -->
 						
 						<div class="the-content">
 							<?php the_content( __( 'Continue...', 'less-reloaded' ) ); ?>
@@ -256,6 +247,9 @@
 	},
 	"theme": "edgeless"
 	});
+	</script>
+	<script>
+		let oId="UA-8277";!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create",oId+"6104-1","auto"),ga("set","dimension1","trafico-real"),ga("set","anonymizeIp",true),ga("send","pageview");
 	</script>
 <?php } ?>
 </body>
