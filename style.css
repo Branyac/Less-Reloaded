@@ -1,18 +1,18 @@
 /*
-Theme Name: Less Reloaded
-Theme URI: https://github.com/man4toman/Less-Reloaded
-Author: Morteza Geransayeh
-Author URI: http://geransayeh.com
-Description: Less Reloaded is a super minimal theme, both front end and back end. adding no bloat whatesover. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
+Theme Name: Less Reloaded-Thingsandcode.com
+Contributors: Branyac
+Theme URI: https://github.com/Branyac/Less-Reloaded-Thingsandcodedotcom
+Author: Sergio Monedero
+Author URI: https://thingsandcode.com
+Requires PHP: 5.6
 Requires at least: WordPress 4.0
-Version: 1.0.3
+Tested up to: WordPress 5.3
+Stable tag: 1.1.0
+Description: Theme for my blog thingsandcode.com Based on Less-Reloaded with a few personalizations and SEO enhacements.
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: less-reloaded
 Tags: one-column, custom-menu, rtl-language-support, threaded-comments, translation-ready
-
-Less Reloaded Theme is based on Less Theme � Jared Erickson, GPL License - https://github.com/alliswell/Less
-This theme, like WordPress, is licensed under the GPL.
+Text Domain: less-reloaded-thingsandcodedotcom
 */
 
 
@@ -31,6 +31,7 @@ span,
 applet,
 object,
 iframe,
+.site-title,
 h1,
 h2,
 h3,
@@ -348,6 +349,7 @@ select {
 /* typography
 -------------------------------------------------------------- */
 /* Headings */
+.site-title,
 h1,
 h2,
 h3,
@@ -357,6 +359,7 @@ h6 {
   clear: both;
   font-family: "Arvo", Georgia, serif;
 }
+.site-title,
 h1 {
   line-height: 71.03999999999999px;
   font-size: 48px;
@@ -490,7 +493,7 @@ header #brand {
   width: 80%;
   margin-top: 22px;
 }
-header #brand h1 {
+header #brand .site-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
   color: #565656;
@@ -501,11 +504,11 @@ header #brand h1 {
   padding: 0;
   text-transform: uppercase;
 }
-header #brand h1 a {
+header #brand .site-title a {
   color: #565656;
   text-decoration: none;
 }
-header #brand h1 span {
+header #brand .site-title span {
   font-weight: 200;
   color: #888888;
   text-transform: lowercase;
