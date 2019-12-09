@@ -31,7 +31,7 @@
 	
 		<nav role="navigation" class="site-navigation main-navigation">
 			<div class="menu"><ul>
-				<li class="page_item">Written by Sergio</a></li>
+				<li class="page_item">Written by Sergio</li>
 				<li class="page_item">| <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
 			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
