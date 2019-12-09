@@ -1,3 +1,25 @@
+#Wordpress theme for thingsandcode.com based on Less Reloaded
+
+Customizations:
+- **Photo from static URL instead Gravatar**.
+- **The link bar has been replaced by my name and my LinkedIn profile.**.
+- **License of the contents on the footer**
+- **Better readability**: I changed the color of the content to increase contrast.
+- **I replaced the comments counter by the date of the post** and put it over the title of the posts.
+- **SEO**:
+    - **Remove `<h1 />` from `<header />`**: Because an html page should have only one title.
+    - **Robots: noimageindex**: Because the relevancy of the blog is in the text.
+    - **Robots: noindex**: Disable indexing for 404, pages, categories, tags, and archive. Only homepage and posts will be on search engines.
+    - **Add Google Analytics**: To understand how people interact with the blog.
+- **Added GDPR notice**
+
+Feel free to download and use this theme in your page.
+**REMEMBER TO CHANGE THESE THINGS BEFORE USING THIS THEME!**
+- **Change the URL of the avatar and put a photo of yours**
+- **Change my name and LinkedIn link for yours**
+- **Delete Google Analytics tracking code from the Footer**
+
+# Details about Less Reloaded
 
 A simple minimal WordPress theme built with only what is needed to survive
 
