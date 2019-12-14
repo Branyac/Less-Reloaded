@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-
+<meta name="robots" content="noimageindex<?php if(is_404() || is_page() || is_category() || is_archive()) {?>,noindex<?php } ?>" />
 <?php wp_head(); ?>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -18,23 +19,21 @@
 	/*-----------------------------------------------------------------------------------*/
 ?>
 
-<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header">
 	<div class="container">
-		
 		<div class="gravatar">
-			<?php 
-				// grab admin email and their photo
-				$admin_email = get_option('admin_email');
-				echo get_avatar( $admin_email, 100 ); 
-			?>
-		</div><!--/ author -->
+			<img alt="" src="/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
+		</div><!-- /author -->
 		
 		<div id="brand">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a> &mdash; <span><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></span></h1>
+			<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a> &mdash; <span><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></span></span>
 		</div><!-- /brand -->
 	
-		<nav role="navigation" class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav class="site-navigation main-navigation">
+			<div class="menu"><ul>
+				<li class="page_item">Written by Sergio</li>
+				<li class="page_item">| <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
+			</ul></div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
 		<div class="clear"></div>
@@ -61,7 +60,9 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article class="post">
-					
+						<div class="post-date">
+							<?php the_time('d/m/Y'); ?>
+						</div>
 						<h1 class="title">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php the_title() ?>
@@ -126,16 +127,10 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article class="post">
-					
+						<div class="post-date">
+							<?php the_time('d/m/Y'); ?>
+						</div>
 						<h1 class="title"><?php the_title() ?></h1>
-						<div class="post-meta">
-							<?php if( comments_open() ) : ?>
-								<span class="comments-link">
-									<?php comments_popup_link( __( 'Comment', 'less-reloaded' ), __( '1 Comment', 'less-reloaded' ), __( '% Comments', 'less-reloaded' ) ); ?>
-								</span>
-							<?php endif; ?>
-						
-						</div><!--/post-meta -->
 						
 						<div class="the-content">
 							<?php the_content( __( 'Continue...', 'less-reloaded' ) ); ?>
@@ -230,15 +225,32 @@
 	/*-----------------------------------------------------------------------------------*/
 ?>
 
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
 	<div class="site-info container">
-		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-reloaded'); ?>" rel="generator"><?php esc_html_e( 'Proudly powered by WordPress', 'less-reloaded'); ?></a>
-		<span class="sep"> <?php esc_html_e( 'and', 'less-reloaded' ); ?> </span>
-		<?php esc_html_e( 'Less Reloaded by Morteza Geransayeh', 'less-reloaded'); ?>
+		Content under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International</a> license
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
 <?php wp_footer(); ?>
 
+<?php if (!is_user_logged_in()) { ?>
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	"palette": {
+		"popup": {
+		"background": "#000"
+		},
+		"button": {
+		"background": "#f1d600"
+		}
+	},
+	"theme": "edgeless"
+	});
+	</script>
+	<script>
+		let oId="UA-8277";!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create",oId+"6104-1","auto"),ga("set","dimension1","trafico-real"),ga("set","anonymizeIp",true),ga("send","pageview");
+	</script>
+<?php } ?>
 </body>
 </html>
