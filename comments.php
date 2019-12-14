@@ -8,5 +8,5 @@
 ?>
 <ol class="commentlist">
 	<?php wp_list_comments(); ?>
-	<?php comment_form(); ?>
 </ol>
+<?php comment_form(); ?>
