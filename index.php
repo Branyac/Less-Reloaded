@@ -19,7 +19,7 @@
 	/*-----------------------------------------------------------------------------------*/
 ?>
 
-<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header">
 	<div class="container">
 		<div class="gravatar">
 			<img alt="" src="/wp-content/uploads/2019/11/foto_perfil.jpg" class="avatar avatar-100 photo" height="100" width="100">
@@ -29,7 +29,7 @@
 			<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a> &mdash; <span><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></span></span>
 		</div><!-- /brand -->
 	
-		<nav role="navigation" class="site-navigation main-navigation">
+		<nav class="site-navigation main-navigation">
 			<div class="menu"><ul>
 				<li class="page_item">Written by Sergio</li>
 				<li class="page_item">| <a href="https://www.linkedin.com/in/sergiocoder/" target="_blank">LinkedIn</a></li>
@@ -225,7 +225,7 @@
 	/*-----------------------------------------------------------------------------------*/
 ?>
 
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
 	<div class="site-info container">
 		Content under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International</a> license
 	</div><!-- .site-info -->
