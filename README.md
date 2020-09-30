@@ -1,3 +1,5 @@
+# NOTE: THIS BRANCH IS INTENDED FOR USE ONLY IN thingsandcode.com PLEASE GIT CHECKOUT MASTER
+
 # About Less Reloaded-thingsandcodedotcom
 A simple minimal WordPress theme built with only what is needed to survive.
 
