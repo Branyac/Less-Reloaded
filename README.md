@@ -6,6 +6,8 @@ Less is a super minimal theme, both front end and back end. Adding no bloat what
 Less Reloaded is modified version that works with WordPress 5 and it's translation ready and it support rtl.
 Less Reloaded-thingsandcodedotcom is modified version optimized for personal blogs.
 
+![screenshot](https://raw.githubusercontent.com/Branyac/Less-Reloaded-Thingsandcodedotcom/master/screenshot.png)
+
 ### Copyright
 Less Reloaded-Thingsandcodedotcom is based on Less Reloaded Theme and distributed under the terms of the GNU GPL License
 
