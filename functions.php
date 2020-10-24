@@ -5,7 +5,7 @@
 /*-----------------------------------------------------------------------------------*/
 add_action( 'after_setup_theme', 'less_theme_setup' );
 function less_theme_setup(){
-    load_theme_textdomain( 'less-reloaded', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'less-revival', get_template_directory() . '/languages' );
 }
 
 // Define the version as a constant so we can easily replace it throughout the theme
@@ -26,7 +26,7 @@ if ( ! isset( $content_width ) ) $content_width = 900;
 /*-----------------------------------------------------------------------------------*/
 register_nav_menus( 
 	array(
-		'primary'	=>	__( 'Primary Menu', 'less-reloaded' ),
+		'primary'	=>	__( 'Primary Menu', 'less-revival' ),
 	)
 );
 

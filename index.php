@@ -79,7 +79,7 @@
 						
 						<div class="the-content">
 							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php the_content( __( 'Continue...', 'less-reloaded' ) ); ?>
+								<?php the_content( __( 'Continue...', 'less-revival' ) ); ?>
 								
 								<?php wp_link_pages(); ?>
 							</div>
@@ -96,15 +96,15 @@
 				
 				<!-- pagintation -->
 				<div id="pagination" class="clearfix">
-					<div class="past-page"><?php previous_posts_link( __( 'Newer &raquo;', 'less-reloaded' ) ); ?></div>
-					<div class="next-page"><?php next_posts_link( __( ' &laquo; Older', 'less-reloaded' ) ); ?></div>
+					<div class="past-page"><?php previous_posts_link( __( 'Newer &raquo;', 'less-revival' ) ); ?></div>
+					<div class="next-page"><?php next_posts_link( __( ' &laquo; Older', 'less-revival' ) ); ?></div>
 				</div><!-- pagination -->
 
 
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-reloaded' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -132,7 +132,7 @@
 						<h1 class="title"><?php the_title() ?></h1>
 						
 						<div class="the-content">
-							<?php the_content( __( 'Continue...', 'less-reloaded' ) ); ?>
+							<?php the_content( __( 'Continue...', 'less-revival' ) ); ?>
 							
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
@@ -156,7 +156,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-reloaded' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -193,7 +193,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-reloaded' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
@@ -209,7 +209,7 @@
 	if( is_404()) {
 ?>
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-reloaded' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
 				</article>
 	<?php } // end is_404(); ?>
 
@@ -226,9 +226,9 @@
 
 <footer class="site-footer">
 	<div class="site-info container">
-		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-reloaded'); ?>" rel="generator"><?php esc_html_e( 'Proudly powered by WordPress', 'less-reloaded'); ?></a>
-		<span class="sep"> <?php esc_html_e( 'and', 'less-reloaded' ); ?> </span>
-		<?php esc_html_e('theme Less-Reloaded-Thingsandcodedotcom by ', 'less-reloaded'); ?> <a href="https://github.com/Branyac" rel="_blank"> <?php esc_html_e('Branyac @ Github', 'less-reloaded') ?> </a>.
+		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-revival'); ?>" rel="generator"><?php esc_html_e( 'Proudly powered by WordPress', 'less-revival'); ?></a>
+		<span class="sep"> <?php esc_html_e( 'and', 'less-revival' ); ?> </span>
+		<?php esc_html_e('theme Less Revival by ', 'less-revival'); ?> <a href="https://github.com/Branyac" rel="_blank"> <?php esc_html_e('Branyac @ Github', 'less-revival') ?> </a>.
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
