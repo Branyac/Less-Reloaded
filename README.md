@@ -1,12 +1,12 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Branyac_Less-Revival&metric=alert_status)](https://sonarcloud.io/dashboard?id=Branyac_Less-Revival)
 
 # Less Revival
-**Contributors:** branyac
-**Requires at least:** WordPress 4.0
-**Tested up to:** WordPress 5.3
-**Requires PHP:** 5.6
+**Contributors:** branyac  
+**Requires at least:** WordPress 4.0  
+**Tested up to:** WordPress 5.3  
+**Requires PHP:** 5.6  
 
-**License:** GPLv3 or later
+**License:** GPLv3 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html
 
 A super minimal theme for Wordpress.
