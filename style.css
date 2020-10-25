@@ -170,8 +170,7 @@ var {
   display: inline-block;
   font: 0.9em monospace;
   line-height: 1.1em;
-  padding: 1em;
-  width: 100%;
+  padding: 0.2em;
 }
 abbr,
 acronym {
