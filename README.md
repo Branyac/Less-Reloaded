@@ -18,7 +18,7 @@ Less Revival is a super minimal theme with no bloatware. It only uses the minimu
 ![screenshot](https://raw.githubusercontent.com/Branyac/Less-Revival/master/screenshot.png)
 
 ## Copyright
-Less Revival Wordpress Theme, Copyright 2019 Sergio Monedero
+Less Revival Wordpress Theme, Copyright 2019 Sergio Monedero  
 Less Revival is distributed under the terms of the GNU GPL v3
 
 Less Revival Theme is based on Less Reloaded Theme, GPL License - https://github.com/man4toman/Less-Reloaded
