@@ -4,6 +4,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <?php if(is_404()) {?><meta name="robots" content="noindex" /><?php } ?>
 <?php wp_head(); ?>
@@ -20,7 +21,7 @@
 
 <header id="masthead" class="site-header">
 	<div class="container">
-		<div class="gravatar">
+		<div class="avatar">
 			<img alt="author" src="<?php bloginfo('template_url'); ?>/dummy-avatar.png" class="avatar avatar-100 photo" height="100" width="100">
 		</div><!-- /author -->
 		
@@ -67,15 +68,6 @@
 								<?php the_title() ?>
 							</a>
 						</h1>
-						<div class="post-meta">
-							<?php
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-							?>
-						
-						</div><!--/post-meta -->
 						
 						<div class="the-content">
 							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

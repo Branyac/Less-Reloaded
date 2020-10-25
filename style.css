@@ -113,6 +113,8 @@ video {
   vertical-align: baseline;
   font: inherit;
   font-size: 100%;
+  line-height: 1.7em;
+  word-break: break-word;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -164,7 +166,12 @@ code,
 kbd,
 tt,
 var {
-  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background: #f0f0f0;
+  display: inline-block;
+  font: 0.9em monospace;
+  line-height: 1.1em;
+  padding: 1em;
+  width: 100%;
 }
 abbr,
 acronym {
@@ -310,7 +317,7 @@ input::-moz-focus-inner {
 input[type=text],
 input[type=email],
 textarea {
-  color: #888888;
+  color: #333333;
   border: 1px solid #dddddd;
   border-radius: 5px;
 }
@@ -342,10 +349,8 @@ select {
   padding: 0;
   margin: 0;
   background: #ffffff;
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-  line-height: 26.64px;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.9em;
 }
 /* typography
 -------------------------------------------------------------- */
@@ -357,40 +362,23 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Segoe UI";
+  line-height: 1.5em;
   clear: both;
-  font-family: "Arvo", Georgia, serif;
 }
+
 .site-title,
-h1 {
-  line-height: 71.03999999999999px;
-  font-size: 48px;
-  font-size: 4.8rem;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
 }
-h2 {
-  line-height: 50.32px;
-  font-size: 34px;
-  font-size: 3.4rem;
-}
-h3 {
-  line-height: 41.44px;
-  font-size: 28px;
-  font-size: 2.8rem;
-}
-h4 {
-  line-height: 26.64px;
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
-}
+
 /* Text elements */
-p {
-  margin-bottom: 1.5em;
-}
 ul,
 ol {
   margin: 0 0 1.5em 3em;
@@ -443,7 +431,7 @@ pre {
 }
 /* Links */
 a {
-  color: #007998;
+  color: #006060;
   -webkit-transition: color 0.25s ease-in-out;
   -moz-transition: color 0.25s ease-in-out;
   -o-transition: color 0.25s ease-in-out;
@@ -475,11 +463,11 @@ a:active {
 /* Header
 -------------------------------------------------------------- */
 header {
-  padding: 20px 0;
+  padding: 0;
   background: transparent;
-  margin: 20px auto;
+  margin: 1em auto;
 }
-header .gravatar {
+header .avatar {
   overflow: hidden;
   width: 100px;
   height: 100px;
@@ -492,32 +480,34 @@ header .gravatar {
 header #brand {
   float: left;
   width: 80%;
-  margin-top: 22px;
+  margin-top: 1em;
 }
 header #brand .site-title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  color: #565656;
+  color:#222222;
   line-height: 23.68px;
   font-size: 16px;
   font-size: 1.6rem;
+  letter-spacing: 0.06em;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
 header #brand .site-title a {
-  color: #565656;
+  color: #222222;
   text-decoration: none;
 }
 header #brand .site-title span {
   font-weight: 200;
-  color: #888888;
+  color: #333333;
   text-transform: lowercase;
 }
 header nav {
   float: left;
-  color: #888888;
+  color: #333333;
   font-size: 14px;
+  letter-spacing: 0.06em;
 }
 header nav ul {
   list-style: none;
@@ -528,8 +518,8 @@ header nav ul li {
   margin: 2px 10px 0 0;
 }
 .container {
-  max-width: 720px;
-  padding: 20px;
+  max-width: 900px;
+  padding: 1em 0;
   margin: 0 auto;
   position: relative;
 }
@@ -538,11 +528,11 @@ header nav ul li {
 article {
   background: transparent;
   padding: 0;
-  margin-bottom: 80px;
+  margin-bottom: 1em;
   border-bottom: 1px solid #dddddd;
 }
 article .title {
-  color: #404040;
+  color: #222222;
   line-height: 56.24px;
   font-size: 38px;
   font-size: 3.8rem;
@@ -550,13 +540,13 @@ article .title {
 }
 article .title a {
   text-decoration: none;
-  color: #404040;
+  color: #222222;
 }
 article .title a:hover {
-  color: #007998;
+  color: #006060;
 }
 article .post-date {
-  color: #888888;
+  color: #333333;
   text-decoration: none;
   font-size: 14px;
 }
@@ -565,7 +555,7 @@ article .post-meta {
   font-size: 14px;
 }
 article .post-meta a {
-  color: #888888;
+  color: #333333;
   text-decoration: none;
 }
 article .post-meta a:hover {
@@ -576,11 +566,12 @@ article .the-content a {
   text-decoration: none;
 }
 article .the-content p {
-  color: #505050;
+  color: #303030;
+  margin: 1.5em 0;
 }
-article .the-content img {
-  width: 100%;
+article .the-content img {  
   height: auto;
+  width: 90%;
 }
 article .meta {
   line-height: 14.8px;
@@ -609,7 +600,7 @@ article .meta .post-categories li {
 }
 /* Pagination */
 #pagination {
-  margin-bottom: 40px;
+  margin-bottom: 1em;
   width: 100%;
 }
 #pagination .past-page {
@@ -619,17 +610,17 @@ article .meta .post-categories li {
   float: left;
 }
 /* Comments */
-h3#comments {
-  margin-bottom: 80px;
-  font-size: 16px;
+h3#comments, h3#reply-title {
+  margin-bottom: 1em;
+  font-size: 1.2em;
 }
 .commentlist {
   list-style: none;
   margin: 0;
 }
 .commentlist .comment {
-  margin: 0 0 40px 50px;
-  padding: 20px;
+  margin: 0 0 1em 50px;
+  padding: 1.2em;
   position: relative;
   list-style: none;
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -637,7 +628,7 @@ h3#comments {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .commentlist .comment .children {
-  margin-top: 40px;
+  margin: 1em 0 0 0;
 }
 .commentlist .comment-author {
   float: left;
@@ -652,8 +643,8 @@ h3#comments {
   display: none;
 }
 .comment-meta {
-  font-size: 12px;
-  margin-bottom: 10px;
+  font-size: 0.7em;
+  margin-bottom: 2.5em;
 }
 .comment-subscription-form,
 .comment-subscription-form {
@@ -668,11 +659,11 @@ h3#comments {
   margin-bottom: 20px;
 }
 #respond form label {
-  color: #888888;
+  color: #333333;
 }
 footer {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 1em;
   font-size: 12px;
 }
 /* Misc & mixens
@@ -709,13 +700,16 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
-/* Media Queries for responsivenessssssss
+/* Media Queries for responsiveness
 -------------------------------------------------------------- */
-@media (max-width: 767px) {
+@media (max-width: 900px) {
+  html {
+    margin: 0 1em;
+  }
   header {
     padding: 0;
   }
-  header .gravatar {
+  header .avatar {
     float: none;
   }
   header hgroup {
