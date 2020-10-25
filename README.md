@@ -40,9 +40,9 @@ Less Theme is distributed under the terms of the GNU GPL
 
 ### 1.0.0
 * First version, based on Less Reloaded Theme version 1.0.3
-* Fix: Remove `<h1 />` from `<header />`**. Pages must have only one title
+* Fix: Remove `<h1 />` from `<header />`. Pages must have only one title
 * Fix: Remove `role` attribute because is not necessary when using these tags: `<header />`, `<nav />`, and `<footer />`
-* Fix: Move the comments form outside `<ol />`** to pass w3 html validator
+* Fix: Move the comments form outside `<ol />` to pass w3 html validator
 * Show publish date
 * Add noimageindex and noindex in archive, pages, and categories
 * Add Google Analytics tracking code and GDPR notice
