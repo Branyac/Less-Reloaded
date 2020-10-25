@@ -71,7 +71,7 @@
 						
 						<div class="the-content">
 							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php the_content( __( 'Continue...', 'less-revival' ) ); ?>
+								<?php the_content( __( 'Continue reading...', 'less-revival' ) ); ?>
 								
 								<?php wp_link_pages(); ?>
 							</div>
@@ -124,7 +124,7 @@
 						<h1 class="title"><?php the_title() ?></h1>
 						
 						<div class="the-content">
-							<?php the_content( __( 'Continue...', 'less-revival' ) ); ?>
+							<?php the_content( __( 'Continue reading...', 'less-revival' ) ); ?>
 							
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
@@ -218,9 +218,9 @@
 
 <footer class="site-footer">
 	<div class="site-info container">
-		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-revival'); ?>" rel="generator"><?php esc_html_e( 'Proudly powered by WordPress', 'less-revival'); ?></a>
+		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-revival'); ?>" rel="generator"><?php esc_html_e( 'Powered by WordPress', 'less-revival'); ?></a>
 		<span class="sep"> <?php esc_html_e( 'and', 'less-revival' ); ?> </span>
-		<?php esc_html_e('theme Less Revival by ', 'less-revival'); ?> <a href="https://github.com/Branyac" rel="_blank"> <?php esc_html_e('Branyac @ Github', 'less-revival') ?> </a>.
+		<?php esc_html_e('theme Less Revival', 'less-revival'); ?>.
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
