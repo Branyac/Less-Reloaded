@@ -13,6 +13,12 @@
 <body <?php body_class(); ?>>
 
 
+<?php function showNotFoundMessage() { ?>
+		<article class="post error">
+			<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
+		</article>
+<?php } ?>
+
 <?php
 	/*-----------------------------------------------------------------------------------*/
 	/* Start header
@@ -55,7 +61,7 @@
 	if( is_home() || is_archive() ) {
 	
 ?>
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) { ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -93,13 +99,11 @@
 				</div><!-- pagination -->
 
 
-			<?php else : ?>
-				
-				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
-				</article>
-
-			<?php endif; ?>
+			<?php 
+			} else {
+				showNotFoundMessage();
+			}
+			?>
 
 		
 	<?php } //end is_home(); ?>
@@ -113,7 +117,7 @@
 ?>
 
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) { ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -140,18 +144,17 @@
 				
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
+					if ( comments_open() || '0' != get_comments_number() ) {
 						comments_template( '', true );
+					}
 				?>
 
 
-			<?php else : ?>
-				
-				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
-				</article>
-
-			<?php endif; ?>
+			<?php 
+			} else {
+				showNotFoundMessage();
+			}
+			?>
 
 
 	<?php } //end is_single(); ?>
@@ -164,7 +167,7 @@
 	if( is_page()) {
 ?>
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) { ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -182,13 +185,11 @@
 
 				<?php endwhile; ?>
 
-			<?php else : ?>
-				
-				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
-				</article>
-
-			<?php endif; ?>
+			<?php 
+			} else {
+				showNotFoundMessage();
+			}
+			?>
 
 	<?php } // end is_page(); ?>
 
@@ -199,11 +200,9 @@
 	/*-----------------------------------------------------------------------------------*/
 	
 	if( is_404()) {
+		showNotFoundMessage();
+	}
 ?>
-				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Nothing posted yet', 'less-revival' ); ?></h1>
-				</article>
-	<?php } // end is_404(); ?>
 
 		</div><!-- #content .site-content -->
 	</div><!-- #primary .content-area -->

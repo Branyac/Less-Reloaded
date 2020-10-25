@@ -19,7 +19,9 @@ add_theme_support( 'automatic-feed-links' );
 /*-----------------------------------------------------------------------------------*/
 /* Add Content width
 /*-----------------------------------------------------------------------------------*/
-if ( ! isset( $content_width ) ) $content_width = 900;
+if ( ! isset( $content_width ) ) {
+    $content_width = 900;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* register main menu
@@ -34,13 +36,10 @@ register_nav_menus(
 /* Enque Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
-function less_scripts()  { 
-
+function less_scripts()  {
 	// theme styles
-    if (!is_admin()) {
-        wp_register_style('less-Arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700', array(), null, 'all');
-        wp_enqueue_style('less-Arvo');
-    }
+    wp_register_style('less-Roboto', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', array(), null, 'all');
+    wp_enqueue_style('less-Roboto');
 	wp_enqueue_style( 'less-style', get_template_directory_uri() . '/style.css', '10000', 'all' );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

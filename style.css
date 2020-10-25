@@ -143,10 +143,6 @@ html {
   /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -161,6 +157,11 @@ q:after {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+th {
+  font-weight: bold;
 }
 code,
 kbd,
@@ -204,13 +205,6 @@ big {
 }
 figure {
   margin: 0;
-}
-table {
-  margin: 0 0 1.5em;
-  width: 100%;
-}
-th {
-  font-weight: bold;
 }
 button,
 input,
@@ -361,7 +355,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", sans-serif;
   line-height: 1.5em;
   clear: both;
 }
@@ -380,6 +374,7 @@ h6 {
 /* Text elements */
 ul,
 ol {
+  list-style: none;
   margin: 0 0 1.5em 3em;
 }
 ul {
@@ -645,7 +640,6 @@ h3#comments, h3#reply-title {
   font-size: 0.7em;
   margin-bottom: 2.5em;
 }
-.comment-subscription-form,
 .comment-subscription-form {
   margin-bottom: 0;
   font-size: 14px;
