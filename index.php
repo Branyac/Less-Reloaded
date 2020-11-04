@@ -28,7 +28,14 @@
 <header id="masthead" class="site-header">
 	<div class="container">
 		<div class="avatar">
-			<img alt="author" src="<?php bloginfo('template_url'); ?>/dummy-avatar.png" class="avatar avatar-100 photo" height="100" width="100">
+			<?php
+			$logo_url = get_template_directory_uri() . '/dummy-avatar.png';
+			if ( has_custom_logo() ) {
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo_url = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+			}
+			?>
+			<img alt="author" src="<?php echo esc_url($logo_url); ?>" class="avatar avatar-100 photo" height="100" width="100">
 		</div><!-- /author -->
 		
 		<div id="brand">
@@ -36,10 +43,7 @@
 		</div><!-- /brand -->
 
 		<nav class="site-navigation main-navigation">
-			<div class="menu"><ul>
-				<li class="page_item">Written by [NAME]</li>
-				<li class="page_item">| <a href="#" target="_blank">[LINK]</a></li>
-			</ul></div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
 		
 		<div class="clear"></div>
