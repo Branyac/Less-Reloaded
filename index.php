@@ -32,7 +32,8 @@
 			$logo_url = get_template_directory_uri() . '/dummy-avatar.png';
 			if ( has_custom_logo() ) {
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
-				$logo_url = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				$custom_logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				$logo_url = $custom_logo_data[0];
 			}
 			?>
 			<img alt="author" src="<?php echo esc_url($logo_url); ?>" class="avatar avatar-100 photo" height="100" width="100">
