@@ -224,7 +224,7 @@
 	<div class="site-info container">
 		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-revival'); ?>" rel="generator"><?php esc_html_e( 'Powered by WordPress', 'less-revival'); ?></a>
 		<span class="sep"> <?php esc_html_e( 'and', 'less-revival' ); ?> </span>
-		<?php esc_html_e('theme Less Revival', 'less-revival'); ?>.
+		<a href="https://thingsandcode.com/less-revival.html"><?php esc_html_e('theme Less Revival', 'less-revival'); ?></a>.
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
