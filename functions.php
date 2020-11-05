@@ -9,7 +9,7 @@ function less_theme_setup(){
 }
 
 // Define the version as a constant so we can easily replace it throughout the theme
-define( 'LESS_VERSION', 1.1 );
+define( 'LESS_VERSION', 2.0 );
 add_theme_support( 'title-tag' );
 /*-----------------------------------------------------------------------------------*/
 /* Add Rss to Head

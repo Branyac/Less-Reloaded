@@ -13,7 +13,7 @@ A super minimal theme for Wordpress.
 Less Revival is a super minimal theme with no bloatware. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
 
 == Copyright ==
-Less Revival Wordpress Theme, Copyright 2019 Sergio Monedero
+Less Revival Wordpress Theme, Copyright 2019-2020 Sergio Monedero
 Less Revival is distributed under the terms of the GNU GPL v3
 
 Less Revival Theme is based on Less Reloaded Theme, GPL License - https://github.com/man4toman/Less-Reloaded
@@ -23,6 +23,14 @@ Less Reloaded Theme is based on Less Theme © Jared Erickson, GPL License - http
 Less Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+= 2.0.0 =
+* New style: New easy to read font, more space, and responsive
+* Add support for custom logo and custom nav links
+* Available languages: English, Spanish, and Catalan
+* 100% valid HTML5 (Tested with W3C Markup Validation Service)
+* Tested with Edge Chromium 86, Firefox 82, and Internet Explorer 11.
+* Now the quality of code is monitored with Sonarqube.
 
 = 1.1.0 =
 * 100% compatible with WordPress 5.5.1
