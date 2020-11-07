@@ -1,65 +1,51 @@
-=== Less Reloaded-Thingsandcode.com ===
-Theme Name: Less Reloaded-Thingsandcode.com
-Contributors: Branyac
-Theme URI: https://github.com/Branyac/Less-Reloaded-Thingsandcodedotcom
-Author: Sergio Monedero
-Author URI: https://thingsandcode.com
+=== Less Revival ===
+Contributors: branyac
+Requires at least: 4.0
+Tested up to: 5.3
 Requires PHP: 5.6
-Requires at least: WordPress 4.0
-Tested up to: WordPress 5.3
-Stable tag: 1.1.0
-Description: Theme for my blog thingsandcode.com Based on Less-Reloaded with a few personalizations and SEO enhacements.
-License: GNU General Public License v3 or later
+License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: one-column, custom-menu, rtl-language-support, threaded-comments, translation-ready
-Text Domain: less-reloaded-thingsandcodedotcom
+
+A super minimal theme for Wordpress.
 
 == Description ==
 
-Thingsandcode.com Theme. Based on Less-Reloaded.
-
-A simple minimal WordPress theme built with only what is needed to survive.
-
-Less is a super minimal theme, both front end and back end. Adding no bloat whatesover. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
-Less Reloaded is modefied version that works with WordPress 5 and it's translation ready and it support rtl.
-
-Less Reloaded Thingsandcode.com is a theme for my blog thingsandcode.com. It is based on Less-Reloaded with a few personalizations and SEO enhacements.
-
-== Installation ==
-
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Less Reloaded in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
+Less Revival is a super minimal theme with no bloatware. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
 
 == Copyright ==
+Less Revival Wordpress Theme, Copyright 2019-2020 Sergio Monedero
+Less Revival is distributed under the terms of the GNU GPL v3
 
-Less Reloaded-Thingsandcode.com Theme is based on Less Theme � Jared Erickson, GPL License - https://github.com/alliswell/Less
-Less Reloaded-Thingsandcode.com Theme is distributed under the terms of the GNU GPL
+Less Revival Theme is based on Less Reloaded Theme, GPL License - https://github.com/man4toman/Less-Reloaded
+
+Less Reloaded Theme is based on Less Theme © Jared Erickson, GPL License - https://github.com/alliswell/Less
+
+Less Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 1.0.3 =
-* Fix 404 error
+= 2.0.0 =
+* New style: New easy to read font, more space, and responsive
+* Add support for custom logo and custom nav links
+* Available languages: English, Spanish, and Catalan
+* 100% valid HTML5 (Tested with W3C Markup Validation Service)
+* Tested with Edge Chromium 86, Firefox 82, and Internet Explorer 11.
+* Now the quality of code is monitored with Sonarqube.
+
+= 1.1.0 =
+* 100% compatible with WordPress 5.5.1
 * Update screenshot
-* Update readme.txt
+* Update README.md
+* Replace customizations like images, links with generic content
+* Replace license on footer by info of the theme
+* Remove noimageindex and noindex in archive, pages, and categories
+* Remove Google Analytics tracking code and GDPR notice
 
-= 1.0.2 =
-* Update screenshot
-* Remove fitvids.js due to WordPress new embeds
-* Move pingback_url to function.php and add a conditional for it
-* Remove break_credits action in footer
-* Add Google font with wp_enqueue_style
-
-= 1.0.1 =
-* Update readme.txt
-* Update Copyright
-* Update screenshot
-* Some fixes
-
-= 1.0 =
-* Initial release
-
-== Resources ==
-* Photo used in the screenshot is distributed under the terms of the GNU GPL
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+= 1.0.0 =
+* First version, based on Less Reloaded Theme version 1.0.3
+* Fix: Remove `<h1 />` from `<header />`**. Pages must have only one title
+* Fix: Remove `role` attribute because is not necessary when using these tags: `<header />`, `<nav />`, and `<footer />`
+* Fix: Move the comments form outside `<ol />`** to pass w3 html validator
+* Show publish date
+* Add noimageindex and noindex in archive, pages, and categories
+* Add Google Analytics tracking code and GDPR notice
