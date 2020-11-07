@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 # NOTE: THIS BRANCH IS INTENDED FOR USE ONLY IN thingsandcode.com PLEASE GIT CHECKOUT MASTER
-
-# About Less Reloaded-thingsandcodedotcom
-A simple minimal WordPress theme built with only what is needed to survive.
-=======
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Branyac_Less-Revival&metric=alert_status)](https://sonarcloud.io/dashboard?id=Branyac_Less-Revival)
->>>>>>> develop
 
 # Less Revival
 **Contributors:** branyac  
