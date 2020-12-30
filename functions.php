@@ -49,6 +49,17 @@ register_nav_menus(
 /* Enque Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
+function add_async_forscript($url)
+{
+    if (strpos($url, '#asyncload')===false)
+        return $url;
+    else if (is_admin())
+        return str_replace('#asyncload', '', $url);
+    else
+        return str_replace('#asyncload', '', $url)."' async='async"; 
+}
+add_filter('clean_url', 'add_async_forscript', 11, 1);
+
 function less_scripts()  {
 	// theme styles
     wp_register_style('less-Roboto', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', array(), null, 'all');
@@ -59,6 +70,14 @@ function less_scripts()  {
 		wp_enqueue_script( 'comment-reply' );
 	}
   
+    if (!is_admin()) {
+        // Quantcast Choice and Google Analytics
+        wp_register_script('quantcast-choice', get_template_directory_uri(). '/js/quantcast.js#asyncload', array(), LESS_VERSION, false );
+        wp_enqueue_script('quantcast-choice');
+
+        wp_register_script('google-analytics', get_template_directory_uri(). '/js/google-analytics.js#asyncload', array('quantcast-choice'), LESS_VERSION, true );
+        wp_enqueue_script('google-analytics');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'less_scripts' );
 
