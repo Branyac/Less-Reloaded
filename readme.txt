@@ -1,12 +1,12 @@
 === Less Revival ===
 Contributors: branyac
 Requires at least: 4.0
-Tested up to: 5.3
+Tested up to: 5.6.1
 Requires PHP: 5.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A super minimal theme for Wordpress.
+A simple and lightweight one column theme for personal blogs.
 
 == Description ==
 
@@ -27,6 +27,11 @@ Less Reloaded Theme is based on Less Theme © Jared Erickson, GPL License - http
 Less Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+= 2.0.1 =
+* Fix: On small screens the comment form width must not exceed page width.
+* Enable emojis to comply with the Wordpress theme Guidelines
+* Tested with Wordpress 5.6.1
 
 = 2.0.0 =
 * New style: New easy to read font, more space, and responsive
