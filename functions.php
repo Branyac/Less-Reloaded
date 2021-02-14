@@ -85,4 +85,5 @@ function disable_wp_emojicons() {
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
     add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
-add_action( 'init', 'disable_wp_emojicons' );
+// The next line is commented because disabling emojis is not compliant with Wordpress theme Guidelines.
+//add_action( 'init', 'disable_wp_emojicons' );
