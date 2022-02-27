@@ -11,6 +11,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php
+	if ( function_exists( 'wp_body_open' ) ) {
+		wp_body_open();
+	} else {
+		do_action( 'wp_body_open' );
+	}
+?>
 
 
 <?php function showNotFoundMessage() { ?>
@@ -77,7 +84,8 @@
 						
 						<div class="the-content">
 							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php the_content( __( 'Continue reading...', 'less-revival' ) ); ?>
+								<?php the_excerpt() ?>
+								<p><a href="<?php the_permalink() ?>"><?php esc_html_e( 'Continue reading...', 'less-revival' ) ?></a></p>
 								
 								<?php wp_link_pages(); ?>
 							</div>
@@ -220,7 +228,8 @@
 		Content under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International</a> license<br /><br />
 		<a href="https://wordpress.org/" title="<?php esc_html_e( 'A Semantic Personal Publishing Platform', 'less-revival'); ?>" rel="generator"><?php esc_html_e( 'Powered by WordPress', 'less-revival'); ?></a>
 		<span class="sep"> <?php esc_html_e( 'and', 'less-revival' ); ?> </span>
-		<a href="https://thingsandcode.com/less-revival.html"><?php esc_html_e('theme Less Revival', 'less-revival'); ?></a>.
+		<a href="https://github.com/Branyac/Less-Revival/"><?php esc_html_e('theme Less Revival', 'less-revival'); ?></a>.<br />
+		<a href="<?php bloginfo('rss2_url'); ?>">RSS</a> - <a href="<?php bloginfo('atom_url'); ?>">Atom</a>
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
